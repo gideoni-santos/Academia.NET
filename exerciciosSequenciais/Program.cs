@@ -86,30 +86,25 @@ namespace exerciciosSequenciais
 
             // 4) Faça um programa em C# e no Visual Studio que receba a data na forma DDMMAAAA e imprima na forma AAAAMMDD e AAMMDD.Note que o dia, o mês e o ano devem ser lidos em variáveis diferentes.
 
-            DateTime dataNow = DateTime.Now;
-            Console.WriteLine("A data de hoje é: " + dataNow);
+            //DateTime dataNow = DateTime.Now;
+            //Console.WriteLine("A data de hoje é: " + dataNow);
 
-            int dia = dataNow.Day;
-            int mes = dataNow.Month;
-            int ano = dataNow.Year;
-            int ano2digitos = dataNow.Year % 100;
+            //int dia = dataNow.Day;
+            //int mes = dataNow.Month;
+            //int ano = dataNow.Year;
+            //int ano2digitos = dataNow.Year % 100;
 
-            string formato1 = ano.ToString("D4") + "/" + mes.ToString("D2") + "/" + dia.ToString("D2");
-            string formato2 = ano2digitos.ToString("D2") + "/" + mes.ToString("D2") + "/" + dia.ToString("D2");
+            //string formato1 = ano.ToString("D4") + "/" + mes.ToString("D2") + "/" + dia.ToString("D2");
+            //string formato2 = ano2digitos.ToString("D2") + "/" + mes.ToString("D2") + "/" + dia.ToString("D2");
 
-            Console.WriteLine("A data atual no formato AAAA/MM/DD é: " + formato1);
+            //Console.WriteLine("A data atual no formato AAAA/MM/DD é: " + formato1);
 
-            Console.WriteLine("A data atual no formato AA/MM/DD é: " + formato2);
+            //Console.WriteLine("A data atual no formato AA/MM/DD é: " + formato2);
 
+            //--------------------------------------------------------------
 
-
-
-
-
-
-
-
-
+            //5) Escreva um programa em C# e no Visual Studio para calcular o consumo médio de um automóvel (medido em Km / l), sendo que são conhecidos a distância total percorrida e o volume de combustível
+            //consumido para percorrê-la(medido em l).
 
 
 
