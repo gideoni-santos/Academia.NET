@@ -152,11 +152,9 @@ namespace exerciciosSequenciais
             //Console.Write("Porcentagem de IPI: ");
             //double ipiB = Convert.ToDouble(Console.ReadLine());
 
-            //// Cálculos
             //double totalA = quantidadeA * valorUnitarioA * (1 + ipiA / 100);
             //double totalB = quantidadeB * valorUnitarioB * (1 + ipiB / 100);
 
-            //// Exibição dos resultados
             //Console.WriteLine("\nTotal para o Parafuso A:");
             //Console.WriteLine($"Código: {codigoA}");
             //Console.WriteLine($"Quantidade de peças: {quantidadeA}");
@@ -171,7 +169,6 @@ namespace exerciciosSequenciais
             //Console.WriteLine($"Porcentagem de IPI: {ipiB}%");
             //Console.WriteLine($"Total com IPI: R${totalB:F2}");
 
-            //// Aguarda o usuário pressionar Enter para encerrar o programa
             //Console.ReadLine();
 
             //--------------------------------------------------------------
@@ -179,45 +176,35 @@ namespace exerciciosSequenciais
             //7) Escreva um programa em C# e no Visual Studio que leia o número de um vendedor, o seu salário fixo, o total de vendas por ele efetuadas e o percentual que ganha sobre o total de vendas. 
             //Calcule o salário total do vendedor. Escreva o número do vendedor e o salário total do vendedor.
 
-            //// Solicita ao usuário que insira o número do vendedor
             //Console.Write("Digite o número do vendedor: ");
             //int numeroVendedor = Convert.ToInt32(Console.ReadLine());
 
-            //// Solicita ao usuário que insira o salário fixo do vendedor
             //Console.Write("Digite o salário fixo do vendedor: R$");
             //double salarioFixo = Convert.ToDouble(Console.ReadLine());
 
-            //// Solicita ao usuário que insira o total de vendas efetuadas pelo vendedor
             //Console.Write("Digite o total de vendas efetuadas pelo vendedor: R$");
             //double totalVendas = Convert.ToDouble(Console.ReadLine());
 
-            //// Solicita ao usuário que insira o percentual de comissão sobre as vendas
             //Console.Write("Digite o percentual de comissão sobre as vendas (%): ");
             //double percentualComissao = Convert.ToDouble(Console.ReadLine());
 
-            //// Calcula o salário total do vendedor (salário fixo + comissão sobre as vendas)
             //double comissao = (percentualComissao / 100) * totalVendas;
             //double salarioTotal = salarioFixo + comissao;
 
-            //// Exibe o número do vendedor e o salário total
             //Console.WriteLine($"Número do vendedor: {numeroVendedor}");
             //Console.WriteLine($"Salário total do vendedor: R${salarioTotal:F2}");
 
-            //// Aguarda o usuário pressionar Enter para encerrar o programa
             //Console.ReadLine();
 
             //--------------------------------------------------------------
 
             // 8) Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula da conversão é F = (9 * C + 160) / 5.
 
-            //// Solicita ao usuário que insira a temperatura em graus Celsius
             //Console.Write("Digite a temperatura em graus Celsius: ");
             //double celsius = Convert.ToDouble(Console.ReadLine());
 
-            //// Calcula a temperatura em graus Fahrenheit usando a fórmula de conversão
             //double fahrenheit = (9 * celsius + 160) / 5;
 
-            //// Exibe a temperatura em graus Fahrenheit
             //Console.WriteLine($"A temperatura em graus Fahrenheit é: {fahrenheit:F2}°F");
 
             //--------------------------------------------------------------
@@ -238,7 +225,6 @@ namespace exerciciosSequenciais
             //Console.Write("Digite o valor da mercadoria: R$ ");
             //valorMercadoria = double.Parse(Console.ReadLine()!);
 
-            //// Calcula a entrada e as duas prestações
             //resto = valorMercadoria % 3;
             //prestacao = (valorMercadoria - resto) / 3;
             //entrada = prestacao + resto;
@@ -277,28 +263,22 @@ namespace exerciciosSequenciais
 
             // 11) Escreva um algoritmo para ler o número de eleitores de um município, o número de votos brancos, nulos e válidos. Calcule e escreva o percentual que cada um  representa em relação ao total de eleitores.
 
-            //// Solicita ao usuário que insira o número de eleitores
             //Console.Write("Digite o número de eleitores: ");
             //int numeroEleitores = Convert.ToInt32(Console.ReadLine());
 
-            //// Solicita ao usuário que insira o número de votos brancos
             //Console.Write("Digite o número de votos brancos: ");
             //int votosBrancos = Convert.ToInt32(Console.ReadLine());
 
-            //// Solicita ao usuário que insira o número de votos nulos
             //Console.Write("Digite o número de votos nulos: ");
             //int votosNulos = Convert.ToInt32(Console.ReadLine());
 
-            //// Solicita ao usuário que insira o número de votos válidos
             //Console.Write("Digite o número de votos válidos: ");
             //int votosValidos = Convert.ToInt32(Console.ReadLine());
 
-            //// Calcula os percentuais
             //double percentualBrancos = (double)votosBrancos / numeroEleitores * 100;
             //double percentualNulos = (double)votosNulos / numeroEleitores * 100;
             //double percentualValidos = (double)votosValidos / numeroEleitores * 100;
 
-            //// Exibe os resultados
             //Console.WriteLine("\nResultados:");
             //Console.WriteLine($"Percentual de votos brancos: {percentualBrancos:F2}%");
             //Console.WriteLine($"Percentual de votos nulos: {percentualNulos:F2}%");
@@ -313,32 +293,24 @@ namespace exerciciosSequenciais
             //Média do consumo = Total quilometragem / quantidade de combustível gasto
             //Lucro do dia = Valor total recebido - (quantidade de combustível gasto * 6,90)
 
-            //// Solicita ao usuário que insira a marcação do odômetro no início do dia
             //Console.Write("Digite a marcação do odômetro no início do dia (em quilômetros): ");
             //double odometroInicio = Convert.ToDouble(Console.ReadLine());
 
-            //// Solicita ao usuário que insira a marcação do odômetro no final do dia
             //Console.Write("Digite a marcação do odômetro no final do dia (em quilômetros): ");
             //double odometroFinal = Convert.ToDouble(Console.ReadLine());
 
-            //// Solicita ao usuário que insira o número de litros de combustível gasto
             //Console.Write("Digite o número de litros de combustível gasto: ");
             //double litrosCombustivel = Convert.ToDouble(Console.ReadLine());
 
-            //// Solicita ao usuário que insira o valor total recebido dos passageiros
             //Console.Write("Digite o valor total recebido dos passageiros (em R$): ");
             //double valorTotalRecebido = Convert.ToDouble(Console.ReadLine());
 
-            //// Calcula a total quilometragem percorrida
             //double totalQuilometragem = odometroFinal - odometroInicio;
 
-            //// Calcula a média do consumo em Km/l
             //double mediaConsumo = totalQuilometragem / litrosCombustivel;
 
-            //// Calcula o lucro líquido do dia
             //double lucroDia = valorTotalRecebido - (litrosCombustivel * 6.90);
 
-            //// Exibe os resultados
             //Console.WriteLine("\nResultados:");
             //Console.WriteLine($"Total quilometragem percorrida: {totalQuilometragem} km");
             //Console.WriteLine($"Média de consumo: {mediaConsumo:F2} Km/l");
@@ -350,39 +322,18 @@ namespace exerciciosSequenciais
             //preço de custo de cada bicicleta vendida. Desenvolva um algoritmo que leia o valor do salário mínimo, o preço de custo de cada bicicleta e o número de bicicletas
             //vendidas pelo vendedor, calcule e mostre: o salário do empregado
 
-            // Solicita ao usuário que insira o valor do salário mínimo
             Console.Write("Digite o valor do salário mínimo: R$");
             double salarioMinimo = Convert.ToDouble(Console.ReadLine());
 
-            // Solicita ao usuário que insira o preço de custo de cada bicicleta
             Console.Write("Digite o preço de custo de cada bicicleta: R$");
             double precoCustoBicicleta = Convert.ToDouble(Console.ReadLine());
 
-            // Solicita ao usuário que insira o número de bicicletas vendidas pelo vendedor
             Console.Write("Digite o número de bicicletas vendidas pelo vendedor: ");
             int bicicletasVendidas = Convert.ToInt32(Console.ReadLine());
 
-            // Calcula o salário do empregado
             double salarioVendedor = 2 * salarioMinimo + (bicicletasVendidas * 0.15 * precoCustoBicicleta);
 
-            // Exibe o resultado
             Console.WriteLine($"O salário do empregado é: R${salarioVendedor:F2}");
-
-            // Aguarda o usuário pressionar Enter para encerrar o programa
-            Console.ReadLine();
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         }
     }
