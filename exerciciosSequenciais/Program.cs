@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System;
 using Microsoft.VisualBasic;
+using System.Drawing;
 
 namespace exerciciosSequenciais
 {
@@ -106,11 +107,118 @@ namespace exerciciosSequenciais
             //5) Escreva um programa em C# e no Visual Studio para calcular o consumo médio de um automóvel (medido em Km / l), sendo que são conhecidos a distância total percorrida e o volume de combustível
             //consumido para percorrê-la(medido em l).
 
+            //Console.Write("Digite a distância total percorrida em km: ");
+            //double distancia = Convert.ToDouble(Console.ReadLine());
 
+            //Console.Write("Digite o volume de combustível consumido em litros: ");
+            //double combustivelConsumido = Convert.ToDouble(Console.ReadLine());
 
+            //double consumoMedio = distancia / combustivelConsumido;
 
+            //Console.WriteLine($"O consumo médio do automóvel é de {consumoMedio:F2} Km/l.");
 
+            //Console.ReadLine();
 
+            //--------------------------------------------------------------
+
+            // 6) Escreva um programa em C# e no Visual Studio que leia os dados para o parafuso A e para o parafuso B, isto é, o código, a quantidade de peças e o valor unitário de cada parafuso e a porcentagem
+            //de IPI(única) a ser acrescentada.
+
+            //// Parafuso A
+            //Console.WriteLine("Informe os dados para o Parafuso A:");
+            //Console.Write("Código: ");
+            //string codigoA = Console.ReadLine();
+
+            //Console.Write("Quantidade de peças: ");
+            //int quantidadeA = Convert.ToInt32(Console.ReadLine());
+
+            //Console.Write("Valor unitário: ");
+            //double valorUnitarioA = Convert.ToDouble(Console.ReadLine());
+
+            //Console.Write("Porcentagem de IPI: ");
+            //double ipiA = Convert.ToDouble(Console.ReadLine());
+
+            //// Parafuso B
+            //Console.WriteLine("\nInforme os dados para o Parafuso B:");
+            //Console.Write("Código: ");
+            //string codigoB = Console.ReadLine();
+
+            //Console.Write("Quantidade de peças: ");
+            //int quantidadeB = Convert.ToInt32(Console.ReadLine());
+
+            //Console.Write("Valor unitário: ");
+            //double valorUnitarioB = Convert.ToDouble(Console.ReadLine());
+
+            //Console.Write("Porcentagem de IPI: ");
+            //double ipiB = Convert.ToDouble(Console.ReadLine());
+
+            //// Cálculos
+            //double totalA = quantidadeA * valorUnitarioA * (1 + ipiA / 100);
+            //double totalB = quantidadeB * valorUnitarioB * (1 + ipiB / 100);
+
+            //// Exibição dos resultados
+            //Console.WriteLine("\nTotal para o Parafuso A:");
+            //Console.WriteLine($"Código: {codigoA}");
+            //Console.WriteLine($"Quantidade de peças: {quantidadeA}");
+            //Console.WriteLine($"Valor unitário: R${valorUnitarioA:F2}");
+            //Console.WriteLine($"Porcentagem de IPI: {ipiA}%");
+            //Console.WriteLine($"Total com IPI: R${totalA:F2}");
+
+            //Console.WriteLine("\nTotal para o Parafuso B:");
+            //Console.WriteLine($"Código: {codigoB}");
+            //Console.WriteLine($"Quantidade de peças: {quantidadeB}");
+            //Console.WriteLine($"Valor unitário: R${valorUnitarioB:F2}");
+            //Console.WriteLine($"Porcentagem de IPI: {ipiB}%");
+            //Console.WriteLine($"Total com IPI: R${totalB:F2}");
+
+            //// Aguarda o usuário pressionar Enter para encerrar o programa
+            //Console.ReadLine();
+
+            //--------------------------------------------------------------
+
+            //7) Escreva um programa em C# e no Visual Studio que leia o número de um vendedor, o seu salário fixo, o total de vendas por ele efetuadas e o percentual que ganha sobre o total de vendas. 
+            //Calcule o salário total do vendedor. Escreva o número do vendedor e o salário total do vendedor.
+
+            //// Solicita ao usuário que insira o número do vendedor
+            //Console.Write("Digite o número do vendedor: ");
+            //int numeroVendedor = Convert.ToInt32(Console.ReadLine());
+
+            //// Solicita ao usuário que insira o salário fixo do vendedor
+            //Console.Write("Digite o salário fixo do vendedor: R$");
+            //double salarioFixo = Convert.ToDouble(Console.ReadLine());
+
+            //// Solicita ao usuário que insira o total de vendas efetuadas pelo vendedor
+            //Console.Write("Digite o total de vendas efetuadas pelo vendedor: R$");
+            //double totalVendas = Convert.ToDouble(Console.ReadLine());
+
+            //// Solicita ao usuário que insira o percentual de comissão sobre as vendas
+            //Console.Write("Digite o percentual de comissão sobre as vendas (%): ");
+            //double percentualComissao = Convert.ToDouble(Console.ReadLine());
+
+            //// Calcula o salário total do vendedor (salário fixo + comissão sobre as vendas)
+            //double comissao = (percentualComissao / 100) * totalVendas;
+            //double salarioTotal = salarioFixo + comissao;
+
+            //// Exibe o número do vendedor e o salário total
+            //Console.WriteLine($"Número do vendedor: {numeroVendedor}");
+            //Console.WriteLine($"Salário total do vendedor: R${salarioTotal:F2}");
+
+            //// Aguarda o usuário pressionar Enter para encerrar o programa
+            //Console.ReadLine();
+
+            //--------------------------------------------------------------
+
+            // 8) Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula da conversão é F = (9 * C + 160) / 5.
+
+            //// Solicita ao usuário que insira a temperatura em graus Celsius
+            //Console.Write("Digite a temperatura em graus Celsius: ");
+            //double celsius = Convert.ToDouble(Console.ReadLine());
+
+            //// Calcula a temperatura em graus Fahrenheit usando a fórmula de conversão
+            //double fahrenheit = (9 * celsius + 160) / 5;
+
+            //// Exibe a temperatura em graus Fahrenheit
+            //Console.WriteLine($"A temperatura em graus Fahrenheit é: {fahrenheit:F2}°F");
 
             //--------------------------------------------------------------
 
@@ -139,6 +247,137 @@ namespace exerciciosSequenciais
             //Console.WriteLine("Valor das prestaçoes: " + prestacao);
 
             //--------------------------------------------------------------
+
+            //10) Um programa para gerenciar os saques de um caixa eletrônico deve possuir algum mecanismo para decidir o número de notas de cada valor que deve ser disponibilizado para o cliente que
+            //realizou o saque. Um possível critério seria o da “distribuição ótima” no sentido de que as notas de menor valor fossem distribuídas em número mínimo possível.
+            //Por exemplo, se a quantia solicitada fosse R$ 87,00 o programa deveria indicar uma nota de R$ 50,00, uma nota de R$ 20,00, uma nota de R$ 10,00, uma nota de R$ 5,00 e duas notas de R$ 1,00.
+            //Escreva um programa que receba o valor da quantia solicitada e retorne a distribuição das notas de acordo com o critério da “distribuição ótima”.
+
+            //// Solicita ao usuário que insira o valor da quantia solicitada
+            //Console.Write("Digite o valor da quantia solicitada: R$");
+            //int quantiaSolicitada = Convert.ToInt32(Console.ReadLine());
+
+            //int[] notasDisponiveis = { 50, 20, 10, 5, 2, 1 };
+
+            //Console.WriteLine("Distribuição das notas:");
+
+            //for (int i = 0; i < notasDisponiveis.Length; i++)
+            //{
+            //    int nota = notasDisponiveis[i];
+            //    int quantidadeNotas = quantiaSolicitada / nota;
+            //    quantiaSolicitada %= nota;
+
+            //    if (quantidadeNotas > 0)
+            //    {
+            //        Console.WriteLine($"Notas de R${nota},00: {quantidadeNotas}");
+            //    }
+            //}
+
+            //--------------------------------------------------------------
+
+            // 11) Escreva um algoritmo para ler o número de eleitores de um município, o número de votos brancos, nulos e válidos. Calcule e escreva o percentual que cada um  representa em relação ao total de eleitores.
+
+            //// Solicita ao usuário que insira o número de eleitores
+            //Console.Write("Digite o número de eleitores: ");
+            //int numeroEleitores = Convert.ToInt32(Console.ReadLine());
+
+            //// Solicita ao usuário que insira o número de votos brancos
+            //Console.Write("Digite o número de votos brancos: ");
+            //int votosBrancos = Convert.ToInt32(Console.ReadLine());
+
+            //// Solicita ao usuário que insira o número de votos nulos
+            //Console.Write("Digite o número de votos nulos: ");
+            //int votosNulos = Convert.ToInt32(Console.ReadLine());
+
+            //// Solicita ao usuário que insira o número de votos válidos
+            //Console.Write("Digite o número de votos válidos: ");
+            //int votosValidos = Convert.ToInt32(Console.ReadLine());
+
+            //// Calcula os percentuais
+            //double percentualBrancos = (double)votosBrancos / numeroEleitores * 100;
+            //double percentualNulos = (double)votosNulos / numeroEleitores * 100;
+            //double percentualValidos = (double)votosValidos / numeroEleitores * 100;
+
+            //// Exibe os resultados
+            //Console.WriteLine("\nResultados:");
+            //Console.WriteLine($"Percentual de votos brancos: {percentualBrancos:F2}%");
+            //Console.WriteLine($"Percentual de votos nulos: {percentualNulos:F2}%");
+            //Console.WriteLine($"Percentual de votos válidos: {percentualValidos:F2}%");
+
+            //--------------------------------------------------------------
+
+            //12) Um motorista de taxi deseja calcular o rendimento de seu carro na praça.Sabendo - se que o preço do combustível é de R$6,90, escreva um algoritmo para ler a
+            //marcação do odômetro(marcador de quilometragem) no início do dia, a marcação no final do dia, o número de litros de combustível gasto e o valor total(R$) recebido
+            //dos passageiros.Calcule e escreva a média do consumo em Km / l e o lucro líquido do dia.
+            //Fórmulas: Total quilometragem = marcação odômetro final do dia - marcação odômetro inicio do dia
+            //Média do consumo = Total quilometragem / quantidade de combustível gasto
+            //Lucro do dia = Valor total recebido - (quantidade de combustível gasto * 6,90)
+
+            //// Solicita ao usuário que insira a marcação do odômetro no início do dia
+            //Console.Write("Digite a marcação do odômetro no início do dia (em quilômetros): ");
+            //double odometroInicio = Convert.ToDouble(Console.ReadLine());
+
+            //// Solicita ao usuário que insira a marcação do odômetro no final do dia
+            //Console.Write("Digite a marcação do odômetro no final do dia (em quilômetros): ");
+            //double odometroFinal = Convert.ToDouble(Console.ReadLine());
+
+            //// Solicita ao usuário que insira o número de litros de combustível gasto
+            //Console.Write("Digite o número de litros de combustível gasto: ");
+            //double litrosCombustivel = Convert.ToDouble(Console.ReadLine());
+
+            //// Solicita ao usuário que insira o valor total recebido dos passageiros
+            //Console.Write("Digite o valor total recebido dos passageiros (em R$): ");
+            //double valorTotalRecebido = Convert.ToDouble(Console.ReadLine());
+
+            //// Calcula a total quilometragem percorrida
+            //double totalQuilometragem = odometroFinal - odometroInicio;
+
+            //// Calcula a média do consumo em Km/l
+            //double mediaConsumo = totalQuilometragem / litrosCombustivel;
+
+            //// Calcula o lucro líquido do dia
+            //double lucroDia = valorTotalRecebido - (litrosCombustivel * 6.90);
+
+            //// Exibe os resultados
+            //Console.WriteLine("\nResultados:");
+            //Console.WriteLine($"Total quilometragem percorrida: {totalQuilometragem} km");
+            //Console.WriteLine($"Média de consumo: {mediaConsumo:F2} Km/l");
+            //Console.WriteLine($"Lucro líquido do dia: R${lucroDia:F2}");
+
+            //--------------------------------------------------------------
+
+            //13) Uma loja vende bicicletas com um acréscimo de 50 % sobre o preço de custo. Ela paga a cada vendedor 2 salários mínimos mensais, mais uma comissão de 15 % sobre o
+            //preço de custo de cada bicicleta vendida. Desenvolva um algoritmo que leia o valor do salário mínimo, o preço de custo de cada bicicleta e o número de bicicletas
+            //vendidas pelo vendedor, calcule e mostre: o salário do empregado
+
+            // Solicita ao usuário que insira o valor do salário mínimo
+            Console.Write("Digite o valor do salário mínimo: R$");
+            double salarioMinimo = Convert.ToDouble(Console.ReadLine());
+
+            // Solicita ao usuário que insira o preço de custo de cada bicicleta
+            Console.Write("Digite o preço de custo de cada bicicleta: R$");
+            double precoCustoBicicleta = Convert.ToDouble(Console.ReadLine());
+
+            // Solicita ao usuário que insira o número de bicicletas vendidas pelo vendedor
+            Console.Write("Digite o número de bicicletas vendidas pelo vendedor: ");
+            int bicicletasVendidas = Convert.ToInt32(Console.ReadLine());
+
+            // Calcula o salário do empregado
+            double salarioVendedor = 2 * salarioMinimo + (bicicletasVendidas * 0.15 * precoCustoBicicleta);
+
+            // Exibe o resultado
+            Console.WriteLine($"O salário do empregado é: R${salarioVendedor:F2}");
+
+            // Aguarda o usuário pressionar Enter para encerrar o programa
+            Console.ReadLine();
+
+
+
+
+
+
+
+
 
 
 
