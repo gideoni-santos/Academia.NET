@@ -197,25 +197,25 @@ namespace exerciciosVetores
             //a.lê: 		| 7 | 40 | 3 | 9 | 21 | 0 | 63 | 31 | 7 | 22 |
             //b.escreve: 	| 22 | 7 | 31 | 63 | 0 | 21 | 9 | 3 | 40 | 7 |
 
-            int tamanho = 10;
-            int[] numeros = new int[tamanho];
+            //int tamanho = 10;
+            //int[] numeros = new int[tamanho];
 
-            // Leitura dos números
-            Console.WriteLine("Digite dez números:");
-            for (int i = 0; i < tamanho; i++)
-            {
-                Console.Write($"Número {i + 1}: ");
-                numeros[i] = int.Parse(Console.ReadLine());
-            }
+            //// Leitura dos números
+            //Console.WriteLine("Digite dez números:");
+            //for (int i = 0; i < tamanho; i++)
+            //{
+            //    Console.Write($"Número {i + 1}: ");
+            //    numeros[i] = int.Parse(Console.ReadLine());
+            //}
 
-            // Escreve os números na ordem contrária à ordem de leitura
-            Console.WriteLine("\nNúmeros na ordem contrária à ordem de leitura:");
-            for (int i = tamanho - 1; i >= 0; i--)
-            {
-                Console.Write($"{numeros[i]} ");
-            }
+            //// Escreve os números na ordem contrária à ordem de leitura
+            //Console.WriteLine("\nNúmeros na ordem contrária à ordem de leitura:");
+            //for (int i = tamanho - 1; i >= 0; i--)
+            //{
+            //    Console.Write($"{numeros[i]} ");
+            //}
 
-
+            //------------------------------------------------------------------------------------------------------
 
 
 
