@@ -534,66 +534,66 @@ namespace exerciciosSelecao
             //ex2: time da casa 1 x 3 time de fora, mostra "O time de fora já se classificou"
             //plus: caso ocorra um segundo jogo, leia o placar desse novo jogo e então diga quem passou de fase.
 
-            int placarCasa, placarFora;
+            //int placarCasa, placarFora;
 
-            // Solicita ao usuário que insira o placar do primeiro jogo
-            Console.Write("Digite o placar do primeiro jogo (1x2): ");
-            string placar = Console.ReadLine();
+            //// Solicita ao usuário que insira o placar do primeiro jogo
+            //Console.Write("Digite o placar do primeiro jogo (1x2): ");
+            //string placar = Console.ReadLine();
 
-            string[] placarParts = placar.Split('x');
+            //string[] placarParts = placar.Split('x');
 
-            if (placarParts.Length != 2)
-            {
-                Console.WriteLine("Formato de placar inválido. Use o formato '1x2'.");
-                return;
-            }
+            //if (placarParts.Length != 2)
+            //{
+            //    Console.WriteLine("Formato de placar inválido. Use o formato '1x2'.");
+            //    return;
+            //}
 
-            if (!int.TryParse(placarParts[0], out placarCasa) || !int.TryParse(placarParts[1], out placarFora))
-            {
-                Console.WriteLine("Placar inválido. Use números inteiros.");
-                return;
-            }
+            //if (!int.TryParse(placarParts[0], out placarCasa) || !int.TryParse(placarParts[1], out placarFora))
+            //{
+            //    Console.WriteLine("Placar inválido. Use números inteiros.");
+            //    return;
+            //}
 
-            // Verifica se o time de fora ganhou por mais de 2 gols de diferença
-            if (placarFora > placarCasa + 2)
-            {
-                Console.WriteLine("O time de fora já se classificou para a próxima fase.");
-            }
-            else
-            {
-                Console.WriteLine("Os dois times se enfrentarão em um novo jogo.");
-                Console.Write("Insira o placar do segundo jogo (1x2): ");
-                placar = Console.ReadLine();
+            //// Verifica se o time de fora ganhou por mais de 2 gols de diferença
+            //if (placarFora > placarCasa + 2)
+            //{
+            //    Console.WriteLine("O time de fora já se classificou para a próxima fase.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Os dois times se enfrentarão em um novo jogo.");
+            //    Console.Write("Insira o placar do segundo jogo (1x2): ");
+            //    placar = Console.ReadLine();
 
-                placarParts = placar.Split('x');
+            //    placarParts = placar.Split('x');
 
-                if (placarParts.Length != 2)
-                {
-                    Console.WriteLine("Formato de placar inválido. Use o formato '1x2'.");
-                    return;
-                }
+            //    if (placarParts.Length != 2)
+            //    {
+            //        Console.WriteLine("Formato de placar inválido. Use o formato '1x2'.");
+            //        return;
+            //    }
 
-                if (!int.TryParse(placarParts[0], out placarCasa) || !int.TryParse(placarParts[1], out placarFora))
-                {
-                    Console.WriteLine("Placar inválido. Use números inteiros.");
-                    return;
-                }
+            //    if (!int.TryParse(placarParts[0], out placarCasa) || !int.TryParse(placarParts[1], out placarFora))
+            //    {
+            //        Console.WriteLine("Placar inválido. Use números inteiros.");
+            //        return;
+            //    }
 
-                if (placarCasa > placarFora)
-                {
-                    Console.WriteLine("O time da casa passou de fase.");
-                }
-                else if (placarFora > placarCasa)
-                {
-                    Console.WriteLine("O time de fora passou de fase.");
-                }
-                else
-                {
-                    Console.WriteLine("Os times empataram. Não houve classificação.");
-                }
-            }
+            //    if (placarCasa > placarFora)
+            //    {
+            //        Console.WriteLine("O time da casa passou de fase.");
+            //    }
+            //    else if (placarFora > placarCasa)
+            //    {
+            //        Console.WriteLine("O time de fora passou de fase.");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Os times empataram. Não houve classificação.");
+            //    }
+            //}
 
-
+            // -------------------------------------------------------------------
 
 
 
