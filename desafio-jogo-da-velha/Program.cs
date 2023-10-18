@@ -104,7 +104,7 @@
                     return true;
                 }
 
-                if (board[i] == currentPlayer && board[i + 3] == currentPlayer && board[i + 6] == currentPlayer)
+                if (board[i] == currentPlayer && board[i + 3] == currentPlayer && board[i + 6] == currentPlayer) 
                 {
                     return true;
                 }
@@ -135,6 +135,7 @@
 
             return true;
         }
+
 
     }
 }
