@@ -2,34 +2,33 @@
 {
     internal class Program
     {
-        static char[] board = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-        static char player = 'X';
-        static char computer = 'O';
+        static char[] tabuleiro = { '1', '2', '3', '4', '5', '6', '7', '8', '9' }; //Array de 1 a 9 que representa as posições do jogo
+        static char jogador = 'X'; //O jogador jogará com o "X"
+        static char computador = 'O'; //O computador jogará com "O"
 
         static void Main(string[] args)
         {
-            bool gameOver = false;
+            bool gameOver = false; //vai verificar se o jogo terminou ou não
             Console.WriteLine("Seja bem-vindo ao Jogo da Velha!\n\n");
 
-            // Garantir que o computador faça a primeira jogada válida
             Console.WriteLine("O computador começou jogando.");
-            ComputerMove();
+            computadorMove();
 
             while (!gameOver)
             {
-                DrawBoard();
-                if (player == 'X')
+                desenhatabuleiro();
+                if (jogador == 'X')
                 {
-                    Console.WriteLine($"Jogador {player}, escolha uma posição (1-9):");
+                    Console.WriteLine($"Jogador {jogador}, escolha uma posição (1-9):");
                     int position;
 
                     while (true)
                     {
                         if (int.TryParse(Console.ReadLine(), out position))
                         {
-                            if (position >= 1 && position <= 9 && board[position - 1] != 'X' && board[position - 1] != 'O')
+                            if (position >= 1 && position <= 9 && tabuleiro[position - 1] != 'X' && tabuleiro[position - 1] != 'O')
                             {
-                                board[position - 1] = player;
+                                tabuleiro[position - 1] = jogador;
                                 break;
                             }
                         }
@@ -40,17 +39,17 @@
                 else
                 {
                     Console.WriteLine("Computador está pensando...");
-                    ComputerMove();
+                    computadorMove();
                 }
 
-                gameOver = CheckForWin(player) || CheckForDraw();
+                gameOver = checaSeGanhou(jogador) || checaSeEmpatou();
 
                 if (gameOver)
                 {
-                    DrawBoard();
-                    if (CheckForWin(player))
+                    desenhatabuleiro();
+                    if (checaSeGanhou(jogador))
                     {
-                        Console.WriteLine($"Jogador {player} venceu!");
+                        Console.WriteLine($"Jogador {jogador} venceu!");
                     }
                     else
                     {
@@ -62,29 +61,29 @@
                     if (playAgain == 'S' || playAgain == 's')
                     {
                         Console.WriteLine("\n");
-                        InitializeBoard();
+                        iniciatabuleiro();
                         gameOver = false;
-                        // Garantir que o computador faça a primeira jogada válida na próxima partida
+                        
                         Console.WriteLine("O computador começou jogando.");
-                        ComputerMove();
+                        computadorMove();
                     }
                 }
                 else
                 {
-                    player = (player == 'X') ? 'O' : 'X';
+                    jogador = (jogador == 'X') ? 'O' : 'X';
                 }
             }
         }
 
-        static void InitializeBoard()
+        static void iniciatabuleiro()
         {
             for (int i = 0; i < 9; i++)
             {
-                board[i] = (i + 1).ToString()[0];
+                tabuleiro[i] = (i + 1).ToString()[0];
             }
         }
 
-        static void DrawBoard()
+        static void desenhatabuleiro()
         {
             for (int i = 0; i < 9; i++)
             {
@@ -94,67 +93,67 @@
                 }
                 if (i % 3 == 1)
                 {
-                    Console.Write($" | {board[i]} |");
+                    Console.Write($" | {tabuleiro[i]} |");
                 }
                 else
                 {
-                    Console.Write($" {board[i]}");
+                    Console.Write($" {tabuleiro[i]}");
                 }
             }
             Console.WriteLine("\n");
         }
 
-        static void ComputerMove()
+        static void computadorMove() //Faz com que o computador escolha uma posição alea´ptoria no tabuleiro
         {
             Random random = new Random();
             int randomPosition;
             do
             {
                 randomPosition = random.Next(0, 9);
-            } while (board[randomPosition] == 'X' || board[randomPosition] == 'O');
+            } while (tabuleiro[randomPosition] == 'X' || tabuleiro[randomPosition] == 'O');
 
-            board[randomPosition] = computer;
+            tabuleiro[randomPosition] = computador;
         }
 
-        static bool CheckForWin(char symbol)
+        static bool checaSeGanhou(char symbol) //Verifica se há 3 X ou 3 O, em uma linha vertical ou horizontal
         {
             for (int i = 0; i < 3; i++)
             {
-                if (board[i * 3] == symbol && board[i * 3 + 1] == symbol && board[i * 3 + 2] == symbol)
+                if (tabuleiro[i * 3] == symbol && tabuleiro[i * 3 + 1] == symbol && tabuleiro[i * 3 + 2] == symbol)
                 {
                     return true;
                 }
 
-                if (board[i] == symbol && board[i + 3] == symbol && board[i + 6] == symbol)
+                if (tabuleiro[i] == symbol && tabuleiro[i + 3] == symbol && tabuleiro[i + 6] == symbol)
                 {
                     return true;
                 }
             }
 
-            if (board[0] == symbol && board[4] == symbol && board[8] == symbol)
+            if (tabuleiro[0] == symbol && tabuleiro[4] == symbol && tabuleiro[8] == symbol)
             {
                 return true;
             }
 
-            if (board[2] == symbol && board[4] == symbol && board[6] == symbol)
+            if (tabuleiro[2] == symbol && tabuleiro[4] == symbol && tabuleiro[6] == symbol)
             {
                 return true;
             }
 
-            return false;
+            return false; //se nenhuma condição for vdd retorna false
         }
 
-        static bool CheckForDraw()
+        static bool checaSeEmpatou()
         {
             for (int i = 0; i < 9; i++)
             {
-                if (board[i] != 'X' && board[i] != 'O')
+                if (tabuleiro[i] != 'X' && tabuleiro[i] != 'O') //Verifica se tem alguma posição não preenchida com X ou O
                 {
-                    return false;
+                    return false; // Se tiver posição vazia o jogo nao é um empate.
                 }
             }
 
-            return true;
+            return true; //Se todas as posições estiverem preenchidas, o jogo é um empate.
         }
     }
 }
