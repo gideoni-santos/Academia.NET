@@ -3,44 +3,44 @@
     internal class Program
     {
 
-        static char[] board = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-        static char currentPlayer = 'X';
+        static char[] tabuleiro = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        static char jogador = 'X';
 
         static void Main(string[] args)
         {
 
-            bool gameover = false;
+            bool gameOver = false; //vai verificar se o jogo terminou ou não
             Console.WriteLine("Seja bem vindo ao Jogo da Velha!\n\n");
 
-            while (!gameover)
+            while (!gameOver)
             {
-                DrawBoard();
-                Console.WriteLine($"Jogador {currentPlayer}, escolha uma posição (1-9):");
-                bool validMove = false;
+                desenhatabuleiro();
+                Console.WriteLine($"Jogador {jogador}, escolha uma posição (1-9):");
+                bool jogadaValida = false;
 
-                while (!validMove)
+                while (!jogadaValida)
                 {
-                    if (int.TryParse(Console.ReadLine(), out int position))
+                    if (int.TryParse(Console.ReadLine(), out int position)) //verifica se pode ser convertido para numero inteiro
                     {
-                        if (position >= 1 && position <= 9 && board[position - 1] != 'X' && board[position - 1] != 'O')
+                        if (position >= 1 && position <= 9 && tabuleiro[position - 1] != 'X' && tabuleiro[position - 1] != 'O')
                         {
-                            board[position - 1] = currentPlayer;
-                            validMove = true;
+                            tabuleiro[position - 1] = jogador;
+                            jogadaValida = true;
                         }
                     }
 
-                    if (!validMove)
+                    if (!jogadaValida)
                     {
                         Console.WriteLine("Jogada inválida. Escolha uma posição válida.");
                     }
                 }
 
-                if (CheckForWin() || CheckForDraw())
+                if (checaSeGanhou() || checaSeEmpatou()) // verifica se o jogo terminou em empate ou vitoria
                 {
-                    DrawBoard();
-                    if (CheckForWin())
+                    desenhatabuleiro();
+                    if (checaSeGanhou())
                     {
-                        Console.WriteLine($"Jogador {currentPlayer} venceu!");
+                        Console.WriteLine($"Jogador {jogador} venceu!");
                     }
                     else
                     {
@@ -52,29 +52,29 @@
                     if (playAgain == 'S' || playAgain == 's')
                     {
                         Console.WriteLine("\n");
-                        InitializeBoard();
+                        iniciatabuleiro();
                     }
                     else
                     {
-                        gameover = true;
+                        gameOver = true;
                     }
                 }
                 else
                 {
-                    currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+                    jogador = (jogador == 'X') ? 'O' : 'X';
                 }
             }
         }
 
-        static void InitializeBoard()
+        static void iniciatabuleiro()
         {
             for (int i = 0; i < 9; i++)
             {
-                board[i] = (i + 1).ToString()[0];
+                tabuleiro[i] = (i + 1).ToString()[0];
             }
         }
 
-        static void DrawBoard()
+        static void desenhatabuleiro()
         {
 
             for (int i = 0; i < 9; i++)
@@ -85,37 +85,37 @@
                 }
                 if (i % 3 == 1)
                 {
-                    Console.Write($" | {board[i]} |");
+                    Console.Write($" | {tabuleiro[i]} |");
                 }
                 else
                 {
-                    Console.Write($" {board[i]}");
+                    Console.Write($" {tabuleiro[i]}");
                 }
             }
             Console.WriteLine("\n");
         }
 
-        static bool CheckForWin()
+        static bool checaSeGanhou() //Verifica se há 3 X ou 3 O, em uma linha vertical ou horizontal
         {
             for (int i = 0; i < 3; i++)
             {
-                if (board[i * 3] == currentPlayer && board[i * 3 + 1] == currentPlayer && board[i * 3 + 2] == currentPlayer)
+                if (tabuleiro[i * 3] == jogador && tabuleiro[i * 3 + 1] == jogador && tabuleiro[i * 3 + 2] == jogador)
                 {
                     return true;
                 }
 
-                if (board[i] == currentPlayer && board[i + 3] == currentPlayer && board[i + 6] == currentPlayer) 
+                if (tabuleiro[i] == jogador && tabuleiro[i + 3] == jogador && tabuleiro[i + 6] == jogador) 
                 {
                     return true;
                 }
             }
 
-            if (board[0] == currentPlayer && board[4] == currentPlayer && board[8] == currentPlayer)
+            if (tabuleiro[0] == jogador && tabuleiro[4] == jogador && tabuleiro[8] == jogador)
             {
                 return true;
             }
 
-            if (board[2] == currentPlayer && board[4] == currentPlayer && board[6] == currentPlayer)
+            if (tabuleiro[2] == jogador && tabuleiro[4] == jogador && tabuleiro[6] == jogador)
             {
                 return true;
             }
@@ -123,17 +123,17 @@
             return false;
         }
 
-        static bool CheckForDraw()
+        static bool checaSeEmpatou()
         {
             for (int i = 0; i < 9; i++)
             {
-                if (board[i] != 'X' && board[i] != 'O')
+                if (tabuleiro[i] != 'X' && tabuleiro[i] != 'O') //Verifica se tem alguma posição não preenchida com X ou O
                 {
-                    return false;
+                    return false; // Se tiver posição vazia o jogo nao é um empate.
                 }
             }
 
-            return true;
+            return true; //Se todas as posições estiverem preenchidas, o jogo é um empate.
         }
 
 
